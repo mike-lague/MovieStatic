@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Movie Finder</title>
+	<link rel="stylesheet" href="main.css">
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="app.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="intro">
+			<div class="left intro-image"></div>
+			<div class="explanation">
+				<h1>Movie Finder</h1>
+				<p>This app lets you search for movies by name (or partial name). Selecting a movie presents the trailer and overview information, and links to services where the movies may be 
+				rented.</p>
+				<p>This app is powered by the 
+				<a href="http://api.guidebox.com">Guidebox API</a>.</p>
+			</div>
+		</div>
+		<hr>
+		<div class="stack">	
+			<p>Find movies by name or partial name.</p>
+			<form class="movie-getter" onsubmit="return false;">
+				<input type="text" placeholder='e.g., "Despicable Me" or "Star Wars"' name="tags" size="30" autofocus required>
+				<input type="submit" value="Search">
+			</form>
+		</div>
+		<div class="results-container">
+			<div class="search-results"></div>
+
+			<p>If more than one movie matches the search criteria,
+			a table of choices will go here; hovering over the title displays
+			a thumbnail of the movie poster</p>
+
+			<table class="results movie-table">
+			<tr class="movie-row">
+				<td class="movie-cell">
+				<div class="hover_img">
+					<a href="#">Star Wars: Episode IV: A New Hope
+					<span>
+					<img src="http://static-api.guidebox.com/022615/thumbnails_movies_small/55413-2337345113-5651742173-3505870658-small-120x171-alt-.jpg" alt="">
+					</span>
+					</a>
+				</div>
+				</td>
+				<td>1977</td>
+			</tr>
+			<tr class="movie-row">
+				<td class="movie-cell">
+				<div class="hover_img">
+					<a href="#">Star Wars: Episode V: The Empire Strikes Back
+					<span>
+					<img src="http://static-api.guidebox.com/022615/thumbnails_movies_small/54105-3978470541-1853669980-9037296348-small-120x171-alt-.jpg" alt="">
+					</span>
+					</a>
+				</div>
+				</td>
+				<td>1980</td>
+			</tr>	
+			</table>
+			
+			<p>If there is only one movie that matches the search, or when a movie in the table of choices is clicked on, the following will appear: the title, an embedded trailer (if any), or a larger movie
+			poster; and the overview of the plot.</p>
+
+			<embed class="movie-trailer" src="http://api-widget.guidebox.com/embed.php?video=6744">
+			<div class="movie-overview">
+				<p>(32 Years Before Episode IV) Stranded on the desert planet Tatooine after rescuing young Queen Amidala from the impending invasion of Naboo, Jedi apprentice Obi-Wan Kenobi and his Jedi Master discover nine-year-old Anakin Skywalker, a young slave unusually strong in the Force.</p>
+			</div>
+
+			<p>If there are ways to rent or buy the movie, a Rent and/or 
+			Buy button will appear here. In practice, if there are no vendors, the button will not appear.</p>
+
+			<form class="movie-renter left">
+				<input type="submit" value="Rent (0 vendors)">
+			</form>
+			<form class="movie-buyer left">
+				<input type="submit" value="Buy (2 vendors)">
+			</form>
+
+			<p style="clear:both">Clicking on the Rent or Buy button will bring up a table with vendor information. Clicking on the vendor name will direct the user to a vendor page where the movie can be acquired.</p>
+
+			<table class="shopping-table">
+				<tr class="shopping-row">
+					<td class="shopping-cell">
+						<a href="https://itunes.apple.com/us/movie/star-wars-the-phantom-menace/id975080816?uo=4&at=10laHb">
+						Itunes<a>
+					</td>
+					<td>SD (19.99), HD (19.99)</td>
+				</tr>
+				<tr class="shopping-row">
+					<td class="shopping-cell">
+						<a href="http://www.amazon.com/gp/product/B00VMHYKBA?tag=guidebox-20">
+						Amazon<a>
+					</td>
+					<td>SD (19.99), HD (19.99)</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div class="templates hidden">
+		
+		<tr class="shopping-row">
+			<td>thumbnail 1</td>
+			<td>movie title 1</td>
+			<td>year 1</td>
+		</tr>
+			
+		<div class="error hidden">
+			<p>Uh-oh! Something went wrong with your request. Here's what we know:</p>
+		</div>
+	</div>
+</body>
+</html>

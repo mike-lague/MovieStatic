@@ -1,0 +1,97 @@
+body {
+	font-family: sans-serif;
+}
+
+.container {
+	margin: 3em auto;
+	width: 600px;
+}
+
+.hidden {
+	display: none;
+}
+
+.left {
+	float: left;
+}
+
+.intro-image {
+	background: url('http://thumbs.dreamstime.com/x/movie-marquee-8121153.jpg') no-repeat center center;
+	width: 200px;
+	height: 200px;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-right: 1em;
+  border-radius: 5px;
+}
+
+.intro {
+	margin-bottom: 1em;
+}
+.stack {
+	clear: both;
+	margin-top: 2.5em;
+}
+
+.movie-table, .shopping-table {
+	font-family: sans-serif;
+	/* font-size: 18px; */
+	border: solid darkgray;
+	border-width: 2px;
+	margin-top: 1.5em;
+	border-collapse: collapse; 
+	/*margin-bottom: 1em;*/
+}
+
+.movie-row, .shopping-row {
+	border: solid lightgray;
+}
+
+.movie-cell, .shopping-cell {
+	border: solid lightgray;
+	border-width: 2px 2px;
+	padding: 0 1em;
+}
+
+
+
+.movie-row:hover, .shopping-row:hover {
+	background-color: lightgreen;
+}
+
+.movie-trailer, .movie-overview {
+	margin-top: 1.5em;
+	width: 600px;
+
+}
+
+.movie-trailer {
+	height: 400px;
+}
+
+.hover_img a { position:relative; }
+.hover_img a span { position:absolute; display:none; z-index:99; }
+.hover_img a:hover span { display:block; }
+	
+
+
+/*.shopping-row:nth-child(even) {
+	background-color: white;
+}
+.shopping-row:nth-child(odd) {
+	background-color: rgb(219, 235, 240); // very light blue
+}
+*/
+
+.result {
+	border: 1px solid black;
+	padding: 5px;
+	margin: 0 auto 1em auto;
+}
+
+.error {
+	background-color: #F78181;
+	padding: 1em;
+}
